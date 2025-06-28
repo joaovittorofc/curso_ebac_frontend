@@ -1,0 +1,109 @@
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* CORES DE FUNDO POR BLOCO */
+:root{
+  --bg-esportes:     #e6ffe6;
+  --bg-ent:          #fff2e6;
+  --bg-tech:         #e7f3ff;
+  --bg-econ:         #f3f1ff;
+  --card-bg:         #ffffff;
+  --card-shadow:     rgba(0,0,0,.1);
+  --btn-bg:          #1a73e8;
+  --btn-bg-ent:      #e67e22;
+  --btn-bg-tech:     #1e88e5;
+  --btn-bg-econ:     #673ab7;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#2e3b4e;
+  color:#fff;
+  padding:1rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.navbar h1{font-size:1.5rem}
+.navbar a{
+  color:#fff;
+  margin-left:1rem;
+  text-decoration:none;
+  font-weight:600;
+}
+.navbar a:hover{opacity:.8}
+
+/* GRID */
+main{
+  max-width:1100px;
+  margin:1.5rem auto;
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
+
+/* BLOCOS */
+.bloco{
+  padding:1rem;
+  border-radius:8px;
+}
+.bloco-esportes{background:var(--bg-esportes)}
+.bloco-ent     {background:var(--bg-ent)}
+.bloco-tech    {background:var(--bg-tech)}
+.bloco-econ    {background:var(--bg-econ)}
+
+.titulo-sessao{margin-bottom:1rem;font-size:1.4rem}
+
+/* CARDS */
+.card{
+  background:var(--card-bg);
+  border-radius:6px;
+  box-shadow:0 2px 5px var(--card-shadow);
+  overflow:hidden;
+  margin-bottom:1.5rem;
+  transition:transform .25s;
+}
+.card:hover{transform:translateY(-4px)}
+
+.card img{width:100%;display:block}
+
+.card h3{padding:.8rem;font-size:1.1rem}
+.card p {padding:0 .8rem 1rem;font-size:.9rem;line-height:1.4}
+
+button{
+  margin:0 .8rem 1rem;
+  padding:.5rem 1.2rem;
+  border:none;
+  border-radius:4px;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:filter .2s
+}
+button:hover{filter:brightness(.9)}
+
+/* Botões por seção */
+.bloco-esportes button{background:var(--btn-bg)}
+.bloco-ent      button{background:var(--btn-bg-ent)}
+.bloco-tech     button{background:var(--btn-bg-tech)}
+.bloco-econ     button{background:var(--btn-bg-econ)}
+
+/* RESPONSIVO */
+@media(min-width:700px){
+  .bloco{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.2rem;
+  }
+  .titulo-sessao{
+    grid-column:1/-1;
+  }
+}
+
+footer{
+  text-align:center;
+  padding:2rem 0;
+  font-size:.85rem;
+  color:#666;
+}
