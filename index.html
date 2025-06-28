@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Validação Numérica</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      label { display: block; margin-top: 1rem; }
+      input { width: 120px; padding: .3rem; }
+      button { margin-top: 1.5rem; padding: .5rem 1rem; cursor: pointer; }
+      #mensagem { margin-top: 1rem; font-weight: bold; }
+    </style>
+  </head>
+
+  <body>
+    <h1>Comparador A × B</h1>
+
+    <form id="form-numeros">
+      <label for="campoA">Campo A</label>
+      <input type="number" id="campoA" required>
+
+      <label for="campoB">Campo B</label>
+      <input type="number" id="campoB" required>
+
+      <button type="submit">Validar</button>
+    </form>
+
+    <p id="mensagem"></p>
+
+    <script>
+      document.getElementById('form-numeros').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const a = Number(document.getElementById('campoA').value);
+        const b = Number(document.getElementById('campoB').value);
+        const msg = document.getElementById('mensagem');
+
+        if (b > a) {
+          msg.textContent = '✅ Sucesso: B é maior que A!';
+          msg.style.color = 'green';
+        } else {
+          msg.textContent = '❌ Erro: B precisa ser maior que A.';
+          msg.style.color = 'red';
+        }
+      });
+    </script>
+  </body>
+</html>
