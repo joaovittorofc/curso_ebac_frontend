@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja de Cartas Pokémon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+    <header style="background-color:#222; color:#fff; padding:1rem;">
+        <div class="container">
+            <h1>PokéStore</h1>
+        </div>
+    </header>
+
+    <main class="container" style="padding:2rem;">
+        <section>
+            <h2>Produtos em destaque</h2>
+            <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+                <div style="flex:1 1 200px; border:1px solid #ccc; padding:1rem; border-radius:8px;">
+                    <img src="https://via.placeholder.com/180x180" alt="Carta Pokémon" style="width:100%;">
+                    <h3>Carta Rara</h3>
+                    <p>Uma carta rara de coleção especial.</p>
+                    <button>Adicionar ao carrinho</button>
+                </div>
+                <div style="flex:1 1 200px; border:1px solid #ccc; padding:1rem; border-radius:8px;">
+                    <img src="https://via.placeholder.com/180x180" alt="Carta Pokémon" style="width:100%;">
+                    <h3>Carta Lendária</h3>
+                    <p>Uma carta lendária exclusiva.</p>
+                    <button>Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top:3rem;">
+            <h2>Contato</h2>
+            <form>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem"></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="background-color:#222; color:#fff; text-align:center; padding:1rem;">
+        <p>&copy; 2025 PokéStore - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="dist/js/script.js"></script>
+</body>
+</html>
